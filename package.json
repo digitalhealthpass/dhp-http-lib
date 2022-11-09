@@ -1,0 +1,70 @@
+{
+  "name": "dhp-http-lib",
+  "version": "3.0.0",
+  "description": "...",
+  "private": false,
+  "engines": {
+    "node": "^12.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc report --check-coverage",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "nyc mocha test --recursive --exit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test && npm run coverage"
+    }
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 0,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0,
+    "exclude": [
+      "test"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "axios-retry": "^3.1.8",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "dhp-logging-lib": "git+ssh://git@github.com:digitalhealthpass/dhp-logging-lib.git",
+    "helmet": "^4.1.1",
+    "lodash": "^4.17.20",
+    "swagger-ui-express": "^4.1.4",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "btoa": "^1.2.1",
+    "chai": "^4.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.1",
+    "husky": "^4.2.5",
+    "mocha": "^8.0.1",
+    "nock": "^13.0.3",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "qs": "^6.9.4",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
+    "supertest": "^4.0.2"
+  }
+}

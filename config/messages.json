@@ -1,0 +1,9 @@
+{
+    "AUTHORIZATION_HEADER_REQUIRED": "A bearer token is required in the Authorization header.",
+    "INVALID_BEARER_TOKEN": "The Authorization header value is malformed. Expected 'Bearer <jwt>'",
+    "MISSING_CLAIMS_IN_BEARER_TOKEN": "The provided bearer token is invalid. Expected a 'scope' claim in the token payload.",
+    "TOKEN_VERIFICATION_FAILED_SYSTEM_ERROR": "Token validation failed due to a system error. Please try again.",
+    "TOKEN_INVALID": "The provided bearer token is invalid. Perhaps it has been tampered with or has expired.",
+    "AUTH_SCOPES_SUFFICIENT": "The assigned scopes are sufficient for the attempted request.",
+    "AUTH_SCOPES_INSUFFICIENT": "The assigned scopes are not sufficient for the attempted request."
+}
